@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* Crisp high-contrast typography and font smoothing */
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #020617;
+  color: #f8fafc;
+}
+
+/* Custom pulsating marker for emergency beacon */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.95;
+  }
+  80%, 100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.emergency-pulse-ring {
+  animation: pulse-ring 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* Ensure Leaflet container fills nicely and popups have sharp readable typography */
+.leaflet-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  z-index: 10;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.5 !important;
+}

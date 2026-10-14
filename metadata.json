@@ -1,0 +1,10 @@
+{
+  "name": "Emergency GPS Tracker - ESP8266 Live Monitor",
+  "description": "Real-time emergency GPS monitoring interface for ESP8266 NodeMCU over USB Serial at 115200 baud with live Leaflet map tracking and alerts.",
+  "requestFramePermissions": [
+    "serial",
+    "usb",
+    "geolocation"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
